@@ -20,16 +20,35 @@ public class CrossCountry {
       String mileOne, mileTwo, finishTime;
       String splitTwo, splitThree;
 
-      /**
-       * get the name and mleOne, mileTwo, finishTime from the user
-       */
+      System.out.println("Please enter your first name: ");
+      firstName = in.nextLine();
+
+      System.out.println("Please enter your last name: ");
+      lastName = in.nextLine();
+
+      System.out.println("Please enter mile one time: ");
+      mileOne = in.nextLine();
+      
+      System.out.println("Please enter mile two time: ");
+      mileTwo = in.nextLine();
+
+      System.out.println("Please enter finish time: ");
+      finishTime = in.nextLine();
+
+
+
+
 
       splitTwo = subtractTimes(mileTwo, mileOne);
       splitThree = subtractTimes(finishTime, mileTwo);
+      System.out.println();
 
-      /**
-       * Display a summary for the runner
-       */
+      System.out.println("The Runners Name is: " + firstName + " " + lastName);
+      System.out.println("Rastin's Time for the first mile is: " + mileOne);
+      System.out.println("Rastin's Time for the second mile is: " + mileTwo);
+      System.out.println("Rastin's Final Time is: " + finishTime);
+
+
    }
 
    private static String subtractTimes(String endTime, String startTime) {
@@ -42,11 +61,27 @@ public class CrossCountry {
    }
 
    private static String convertToTime(double diffInSeconds) {
-      // return String.format("%d:%06.3f", minutes, seconds1);
+      return String.format("%d:%06.3f", getMinutes(diffInSeconds), getSeconds(diffInSeconds));
 
-      // create getMinutes and getSeconds functions to use
+   }
+
+   private static double getSeconds(double diffInSeconds) {
+      double seconds = (diffInSeconds%60);
+      return seconds;
+   }
+
+   private static int getMinutes(double diffInSeconds) {
+      int minutes = (int) (diffInSeconds/60);
+      return minutes;
    }
 
    private static double convertToSeconds(String endTime) {
-      return 0;
+      int end = endTime.indexOf(":");
+      String min = endTime.substring(0, end);
+      String sec = endTime.substring(end+1);
+      double seconds = Double.valueOf(sec);
+      double minutes = Double.valueOf(min);
+      return (minutes*60) + seconds;
+      
     }
+}
