@@ -44,9 +44,9 @@ public class CrossCountry {
       System.out.println();
 
       System.out.println("The Runners Name is: " + firstName + " " + lastName);
-      System.out.println("Rastin's Time for the first mile is: " + mileOne);
-      System.out.println("Rastin's Time for the second mile is: " + mileTwo);
-      System.out.println("Rastin's Final Time is: " + finishTime);
+      System.out.println(firstName +  "'s Time for the first mile is: " + mileOne);
+      System.out.println(firstName +  "'s Time for the second mile is: " + mileTwo);
+      System.out.println(firstName + "'s Final Time is: " + finishTime);
 
 
    }
