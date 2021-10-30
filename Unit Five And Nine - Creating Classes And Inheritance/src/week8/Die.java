@@ -1,6 +1,8 @@
 package week8;
 
 public class Die {
+    
+    
    // attributes - defines the state of he Object
 
    // The attributes SHOULD be private
@@ -44,5 +46,9 @@ public class Die {
         } else {
             return false;
         }
+   }
+
+   public String toString() {
+       return "" + topSide;
    }
 }

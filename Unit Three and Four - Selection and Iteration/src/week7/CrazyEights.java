@@ -69,7 +69,7 @@ public class CrazyEights {
       String c1Hand = "";
       String c2Hand = "";
 
-      // create a for loop that executes five tomes and give each player a card each time through
+      // create a for loop that executes five times and give each player a card each time through
       for (int i = 0; i < 5; i++ ){
          playerHand += getCard() + " ";
          c1Hand += getCard() + " ";
@@ -83,7 +83,7 @@ public class CrazyEights {
 
       String topCard = getCard(); // no eights
       Scanner in = new Scanner(System.in);
-      // "7H 3D AC JS-9D"
+      //
       String temp = processPlayer(in, playerHand, topCard);
       playerHand = temp.substring(0, temp.indexOf("-"));
       topCard = temp.substring(temp.indexOf("-") + 1);
@@ -98,22 +98,28 @@ public class CrazyEights {
    }
 
    private static String processComputer(String c1Hand, String topCard) {
-      return "-4D";
+      
    }
 
    private static String processPlayer(Scanner in, String playerHand, String topCard) {
-      
+      System.out.println(playerHand);
+      System.out.println(topCard);
       boolean play = canPlay(playerHand, topCard);
       
       
       
-      return "7H 3D 4C-2D";
+      return playerHand + "-" + topCard;
    }
 
    private static boolean canPlay(String playerHand, String topCard) {
       // does the playerHand have the suit from topCard or the face or does the player have an 8
-
-
+      if (playerHand.equals(topCard)){
+         return true;
+      } else if (playerHand.equals()){
+      return true;
+      } else {
+         return false;
+      }
    }
 
    private static boolean gameOver(int p1Points, int c1Points, int c2Points) {
