@@ -336,6 +336,7 @@ public class CrazyEights {
 
    private static boolean gameOver(int p1Points, int c1Points, int c2Points) {
       return p1Points >= 100 || c1Points >= 100 || c2Points >= 100;
+      //.
    }
 }
  
