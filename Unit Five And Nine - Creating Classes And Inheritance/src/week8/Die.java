@@ -3,7 +3,7 @@ package week8;
 public class Die {
     
     
-   // attributes - defines the state of he Object
+   // attributes - defines the state of the Object
 
    // The attributes SHOULD be private
    // private -> visible(accessible) in this class
