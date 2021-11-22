@@ -210,7 +210,7 @@ public class DoubleArraySequence {
         if (isCurrent()) {
             currentIndex++;
         } else {
-            throw new IllegalStateException("There is no current element...");
+            throw new IllegalStateException("There is no current element");
         }
     }
 
